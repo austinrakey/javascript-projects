@@ -1,3 +1,10 @@
-function sayHello() {
-   console.log("Hello, World!");
+
+let message = "Hello, World!";
+
+function printMessage() {
+    console.log(message);
 }
+
+printMessage();
+message = "Goodbye";
+printMessage();

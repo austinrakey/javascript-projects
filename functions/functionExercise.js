@@ -103,16 +103,25 @@ console.log(makeIsoscelesTriangle(5) + "\n");
 
 
 
+function reverse(str) {
+    let reversed = '';
+
+    for (let i = 0; i < str.length; i++) {
+        reversed = str[i] + reversed;
+    }
+
+    return reversed;
+}
 
 
 function makeDiamond(height) {
 
-let diamond = (makeIsoscelesTriangle(height))
+let diamondExercise = makeIsoscelesTriangle(height) + "\n" + reverse(makeIsoscelesTriangle(height))
 
+
+
+return diamondExercise
 }
-
-return diamond
-
 
 
 console.log(makeDiamond(5));

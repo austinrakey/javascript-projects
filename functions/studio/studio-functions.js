@@ -9,6 +9,18 @@
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
+// function reverseCharacters(str){
+    
+//     let stringOne = str
+//     let arrayOne = (stringOne.split('').reverse())
+
+//     stringOne = arrayOne.join("")
+
+// return stringOne
+// }
+// console.log(reverseCharacters("Austin is great!"))
+
+
 // Part Two: Reverse Digits
 
 // 1. Add an if statement to reverseCharacters to check the typeof the parameter.
@@ -16,6 +28,33 @@
 // 3. If typeof is ’number’, convert the parameter to a string, reverse the characters, then convert it back into a number.
 // 4. Return the reversed number.
 // 5. Be sure to print the result returned by the function to verify that your code works for both strings and numbers. Do this before moving on to the next exercise.
+
+function reverseCharacters(str){
+    
+if (typeof str === "string") {
+
+    let stringOne = str;
+    let arrayOne = (stringOne.split('').reverse());
+
+    stringOne = arrayOne.join("");
+
+    return stringOne;
+
+} else {
+    let stringOne = str.toString();
+    let arrayOne = (stringOne.split('').reverse());
+
+    stringOne = parseInt(arrayOne.join(""));
+
+    return stringOne;
+}    
+}
+
+console.log(reverseCharacters("Austin is great!"));
+console.log(reverseCharacters(123));
+
+
+
 
 // Part Three: Complete Reversal
 
@@ -29,6 +68,19 @@
 let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
+
+function arrayReversal(arrayTest){
+    let reversedArray = [];
+
+    for (i = 0; i < arrayTest.length; i++){
+    reversedArray.unshift(reverseCharacters(arrayTest[i]));
+    }
+    return reversedArray;
+}
+
+console.log(arrayReversal(arrayTest1));
+console.log(arrayReversal(arrayTest2));
+console.log(arrayReversal(arrayTest3));
 
 // Bonus Missions
 

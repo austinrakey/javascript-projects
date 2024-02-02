@@ -1,5 +1,9 @@
 // Code your orbitCircumference function here:
+let altitude = 2000
 
+ function orbitCircumference(altitude){
+    return Math.round(2 * Math.PI * altitude);
+ }
 
 // Code your missionDuration function here:
 

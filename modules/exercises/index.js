@@ -3,7 +3,7 @@ const input = require('readline-sync');
 const averages = require('./ScoreCalcs/averages.js');
 const printAll = require('./display.js');
 const randomSelect = require('./randomSelect.js');
-const { averageForTest } = require('./ScoreCalcs/averages');
+// const { averageForTest } = require('./ScoreCalcs/averages');
 
 //Candidate data:
 let astronauts = ['Fox','Turtle','Cat','Hippo','Dog'];
